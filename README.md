@@ -4,24 +4,6 @@ Infrastructure project for running the MusicStudio application on three separate
 
 This project simulates a simple multi-tier infrastructure where the frontend, backend, and database are deployed independently.
 
-Architecture
-                        Host Machine
-                             │
-                             │
-                  Vagrant + VirtualBox
-                             │
-        ┌────────────────────┼────────────────────┐
-        │                    │                    │
-        ▼                    ▼                    ▼
- ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
- │ Frontend VM │      │ Backend VM  │      │ Database VM │
- │             │      │             │      │             │
- │   Docker    │────▶│   Docker    │─────▶│   Docker    │
- │             │ HTTP │             │ SQL  │ PostgreSQL  │
- │ React/Vite  │      │ Backend/Node│      │             │
- └─────────────┘      └─────────────┘      └─────────────┘
-  192.168.56.101       192.168.56.102       192.168.56.103
-
 Project Goal
 
 The goal of this project is to practice infrastructure and DevOps concepts by deploying an existing application across multiple virtual machines.
